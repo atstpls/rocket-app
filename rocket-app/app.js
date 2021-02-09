@@ -15,7 +15,7 @@ require('dotenv').config();
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var authRouter = require('./routes/auth');
-var calendarRouter = require('./routes/calendar');
+var calendarRouter = require('./routes/race');
 
 var app = express();
 
@@ -105,7 +105,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/auth', authRouter);
-app.use('/calendar', calendarRouter);
+app.use('/race', calendarRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler

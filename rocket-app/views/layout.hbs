@@ -20,27 +20,53 @@
   <body>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div class="container">
-        <a href="/" class="navbar-brand"> Rocket League App</a>
+        <a href="/" class="navbar-brand"><img src="https://sn9jpk.media.zestyio.com/Shield-Solid-On-Dark.png" width="45" height="45"></img></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
           aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
+            {{!-- <li class="nav-item">
               <a href="/" class="nav-link{{#if active.home}} active{{/if}}">Home</a>
-            </li>
+            </li> --}}
             {{#if user}}
               <li class="nav-item" data-turbolinks="false">
-                <a href="/calendar" class="nav-link{{#if active.calendar}} active{{/if}}">Calendar</a>
+                <a href="/race" class="nav-link{{#if active.calendar}} active{{/if}}">Race</a>
+              </li>
+                            <li class="nav-item" data-turbolinks="false">
+                <a href="/bodies" class="nav-link{{#if active.calendar}} active{{/if}}">Bodies</a>
+              </li>
+                            <li class="nav-item" data-turbolinks="false">
+                <a href="/wheels" class="nav-link{{#if active.calendar}} active{{/if}}">Wheels</a>
+              </li>
+                            <li class="nav-item" data-turbolinks="false">
+                <a href="/upgrades" class="nav-link{{#if active.calendar}} active{{/if}}">Upgrades</a>
               </li>
             {{/if}}
           </ul>
           <ul class="navbar-nav justify-content-end">
             <li class="nav-item">
-              <a class="nav-link" href="https://developer.microsoft.com/graph/docs/concepts/overview" target="_blank">
-                <i class="fas fa-external-link-alt mr-1"></i>Docs
-              </a>
+              <a class="nav-link" href="https://www.rocketleague.com/" target="_blank">
+                <i class="fas fa-external-link-alt mr-1"></i>Official Site</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.epicgames.com/store/en-US/product/rocket-league/home" target="_blank">
+                <i class="fas fa-external-link-alt mr-1"></i>Epic Games</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link" href="https://rocketleague.tracker.network/" target="_blank">
+                <i class="fas fa-external-link-alt mr-1"></i>Stats Tracker</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link" href="https://rocketleague.fandom.com/wiki/Rocket_League_Wiki" target="_blank">
+                <i class="fas fa-external-link-alt mr-1"></i>Wiki&nbsp;&nbsp;</a>
             </li>
             {{#if user}}
               <li class="nav-item dropdown">
